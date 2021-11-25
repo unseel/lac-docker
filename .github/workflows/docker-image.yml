@@ -23,7 +23,7 @@ jobs:
           flavor: |
             latest=false
           tags: |
-            type=semer,pattern={{version}}
+            type=semver,pattern={{version}}
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v2
