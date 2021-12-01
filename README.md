@@ -12,7 +12,7 @@ Dockerize [lac](https://github.com/baidu/lac)
 sample call
 
 ```bash
-curl http://127.0.0.1:5000/lac/seg?text=剪刀T恤香蕉台灯蜡烛手表杯子叶子钥匙勺子
+curl http://127.0.0.1:5000/seg?text=剪刀T恤香蕉台灯蜡烛手表杯子叶子钥匙勺子
 ```
 
 ## Benchmark

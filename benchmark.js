@@ -7,7 +7,7 @@ export const options = {
 };
 
 export default function () {
-  const res = http.get('http://127.0.0.1:5000/lac/seg?text=剪刀T恤香蕉台灯蜡烛手表杯子叶子钥匙勺子');
+  const res = http.get('http://127.0.0.1:5000/seg?text=剪刀T恤香蕉台灯蜡烛手表杯子叶子钥匙勺子');
   check(res, { 'status was 200': (r) => r.status == 200 });
   sleep(1);
 }

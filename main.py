@@ -10,7 +10,7 @@ host = os.getenv("LAC_HOST")
 port = os.getenv("LAC_PORT")
 
 
-@app.route("/lac/seg", methods=["GET"])
+@app.route("/seg", methods=["GET"])
 def lac_seg():
   text = request.args.get("text")
   if not text:
