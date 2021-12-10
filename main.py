@@ -6,9 +6,8 @@ import os
 app = Flask(__name__)
 seg = LAC(mode='seg')
 
-host = os.getenv("LAC_HOST")
-port = os.getenv("LAC_PORT")
-
+host = os.getenv("LAC_HOST", "0.0.0.0")
+port = os.getenv("LAC_PORT", "5000")
 
 @app.route("/seg", methods=["GET"])
 def lac_seg():
@@ -24,5 +23,5 @@ def lac_seg():
   }
 
 if __name__ == "__main__":
-  app_server = WSGIServer((host, int(port)), app)
+  app_server = WSGIServer((host, int(port)), app, log=app.logger)
   app_server.serve_forever()
