@@ -2,8 +2,10 @@ from flask import Flask, request
 from LAC import LAC
 from gevent.pywsgi import WSGIServer
 import os
+import logging
 
 app = Flask(__name__)
+app.logger.setLevel(logging.INFO)
 seg = LAC(mode='seg')
 
 host = os.getenv("LAC_HOST", "0.0.0.0")
